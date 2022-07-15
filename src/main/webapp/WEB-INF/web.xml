@@ -1,0 +1,119 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	
+	<welcome-file-list>
+		<welcome-file>homepage.jsp</welcome-file>
+	</welcome-file-list>
+
+  <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+  	<servlet-name>LogControl</servlet-name>
+  	<display-name>LogControl</display-name>
+  	<description></description>
+  	<servlet-class>com.hung.Controller.LogControl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SignupControl</servlet-name>
+  	<display-name>SignupControl</display-name>
+  	<description></description>
+  	<servlet-class>com.hung.Controller.SignupControl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DisplayControl</servlet-name>
+  	<display-name>DisplayControl</display-name>
+  	<description></description>
+  	<servlet-class>com.hung.Controller.DisplayControl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UploadControl</servlet-name>
+  	<display-name>UploadControl</display-name>
+  	<description></description>
+  	<servlet-class>com.hung.Controller.UploadControl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Text</servlet-name>
+  	<display-name>Text</display-name>
+  	<description></description>
+  	<servlet-class>com.hung.Controller.Text</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HomePageViewControl</servlet-name>
+  	<display-name>HomePageViewControl</display-name>
+  	<description></description>
+  	<servlet-class>com.hung.Controller.HomePageViewControl</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LogOutControl</servlet-name>
+  	<display-name>LogOutControl</display-name>
+  	<description></description>
+  	<servlet-class>com.hung.Controller.LogOutControl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  	<servlet-name>LogControl</servlet-name>
+  	<url-pattern>/LogControl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SignupControl</servlet-name>
+  	<url-pattern>/SignupControl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DisplayControl</servlet-name>
+  	<url-pattern>/DisplayControl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UploadControl</servlet-name>
+  	<url-pattern>/UploadControl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Text</servlet-name>
+  	<url-pattern>/Text</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HomePageViewControl</servlet-name>
+  	<url-pattern>/HomePageViewControl</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LogOutControl</servlet-name>
+  	<url-pattern>/LogOutControl</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+  	<filter-name>LogedInVerifier</filter-name>
+  	<display-name>LogedInVerifier</display-name>
+  	<description></description>
+  	<filter-class>com.hung.Filter.LogedInVerifier</filter-class>
+  </filter>
+
+  <filter-mapping>
+  	<filter-name>LogedInVerifier</filter-name>
+  	<url-pattern>/Upload.jsp</url-pattern>
+  </filter-mapping>
+  
+	  <filter-mapping>
+	  	<filter-name>LogedInVerifier</filter-name>
+	  	<url-pattern>/WatchAndDownload.jsp</url-pattern>
+	  </filter-mapping>
+  
+    <filter-mapping>
+	  	<filter-name>LogedInVerifier</filter-name>
+	  	<url-pattern>/Downloaded.jsp</url-pattern>
+  	</filter-mapping>
+  
+    <filter-mapping>
+	  	<filter-name>LogedInVerifier</filter-name>
+	  	<url-pattern>/Account.jsp</url-pattern>
+  	</filter-mapping>
+  
+  	<filter-mapping>
+	  	<filter-name>LogedInVerifier</filter-name>
+	  	<url-pattern>/UploadControl</url-pattern>
+  	</filter-mapping>
+  
+  <listener>
+  		<listener-class>com.hung.Controller.LoadAtStartControl</listener-class>
+  </listener>
+</web-app>
